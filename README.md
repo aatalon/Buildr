@@ -1,1 +1,1 @@
-# Buildr - Advanced Libary
+# Buildr - Advanced Library
