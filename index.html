@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buildr — Developing Made Easy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-left">
+      <img src="logo-buildr.png" alt="Buildr logo" class="nav-logo-img">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="scripts.html" class="nav-link">Scripts</a>
+      <a href="assets.html" class="nav-link">Assets</a>
+      <a href="sounds.html" class="nav-link">Sounds</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="card">
+
+    <h1 class="title"><span id="typed-text"></span></h1>
+    <p class="subtitle">
+      <span>Developing Made Easy.</span> Your Roblox Studio toolkit.
+    </p>
+
+    <div class="buttons-row">
+      <a class="btn-pill" href="scripts.html">⌨ Scripts</a>
+      <a class="btn-pill" href="assets.html">📦 Assets</a>
+      <a class="btn-pill" href="sounds.html">🎧 Sounds</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const text = "Buildr";
+  const typedTextEl = document.getElementById("typed-text");
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      typedTextEl.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 150);
+    }
+  }
+  window.onload = type;
+</script>
+
+</body>
+</html>
